@@ -38,6 +38,7 @@ d ON a.id_petugas = d.id_petugas LEFT JOIN kelas as e ON b.id_kelas = e.id_kelas
             <!-- Navbar -->
 
                 <!-- Page content-->
+        <div id="source-html">
             <div class="container-fluid">
                 <div class="mt-4">
                     <div class="card shadow">
@@ -145,10 +146,33 @@ d ON a.id_petugas = d.id_petugas LEFT JOIN kelas as e ON b.id_kelas = e.id_kelas
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="m-3 text-end">
+            <button class="btn btn-primary" id="btn-export" onclick="exportHTML();">
+                Simpan
+            </button>
+        </div>
 
         <?php 
             include('./components/footer.php')
         ?>
-        
+        <script>
+            function exportHTML(){
+                var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
+                        "xmlns:w='urn:schemas-microsoft-com:office:word' "+
+                        "xmlns='http://www.w3.org/TR/REC-html40'>"+
+                        "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+                var footer = "</body></html>";
+                var sourceHTML = header+document.getElementById("source-html").innerHTML+footer;
+                
+                var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+                var fileDownload = document.createElement("a");
+                document.body.appendChild(fileDownload);
+                fileDownload.href = source;
+                fileDownload.download = 'document.doc';
+                fileDownload.click();
+                document.body.removeChild(fileDownload);
+            }
+        </script>
     </body>
 </html>

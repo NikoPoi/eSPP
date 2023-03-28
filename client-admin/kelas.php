@@ -45,13 +45,13 @@
                                     <div class="form-group mb-3">
                                         <div class="row">
                                             <div class="col h6">Nama Kelas</div>
-                                            <input type="text" name="nama_kelas" class="form-control col-md-8">
+                                            <input type="text" name="nama_kelas" class="form-control col-md-8" required>
                                         </div>
                                     </div>
                                     <div class="form-group mb-2">
                                         <div class="row">
                                             <div class="col h6">Kompetensi Keahlian</div>
-                                            <input type="text" name="jurusan" class="form-control col-md-8">
+                                            <input type="text" name="jurusan" class="form-control col-md-8" required>
                                         </div>
                                     </div>
                                     <!-- <div class="form-group">

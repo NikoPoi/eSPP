@@ -10,19 +10,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="../index.php">Beranda</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../kelas.php">Kelas</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link" href="../petugas.php">Petugas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../siswa.php">Siswa</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../spp.php">SPP</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Pembayaran

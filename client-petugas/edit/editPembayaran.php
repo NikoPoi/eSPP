@@ -1,11 +1,11 @@
 <?php
-  // memanggil file conneksi.php untuk membuat koneksi
+  // memanggil file conneksi.php untuk membuat conneksi
 include '../../connection.php';
 // tenari
     // ['id'] == 0 ? $id : $id = ($_GET["id"]);
 
   // mengecek apakah di url ada nilai GET id
-    if (isset($_GET['id'])) {
+  if (isset($_GET['id'])) {
     // ambil nilai id dari url dan disimpan dalam variabel $id
     $id = ($_GET["id"]);
 
@@ -15,26 +15,25 @@ include '../../connection.php';
     $result = mysqli_query($conn, $query);
     // jika data gagal diambil maka akan tampil error berikut
     if(!$result){
-        die ("Query Error: ".mysqli_errno($conn).
-        " - ".mysqli_error($conn));
+      die ("Query Error: ".mysqli_errno($conn).
+         " - ".mysqli_error($conn));
     }
     // mengambil data dari database
     $data = mysqli_fetch_assoc($result);
 
     $nominal =$data['nominal'] ;
     $HN = number_format($nominal);
-    $jbl_bayar = $data['jumlah_bayar'];
-    $JB = number_format($jbl_bayar);
+    $jumlah_bayar = $data['jumlah_bayar'];
+    $JB = number_format($jumlah_bayar);
       // apabila data tidak ada pada database maka akan dijalankan perintah ini
-        if (!count($data)) {
-            echo "<script>alert('Data tidak ditemukan pada database');window.location='index.php';</script>";
-        }
-    } else {
-        // apabila tidak ada data GET id pada akan di redirect ke index.php
-        echo "<script>alert('Masukkan data id.');window.location='index.php';</script>";
-    }         
-?>
-
+       if (!count($data)) {
+          echo "<script>alert('Data tidak ditemukan pada database');window.location='index.php';</script>";
+       }
+  } else {
+    // apabila tidak ada data GET id pada akan di redirect ke index.php
+    echo "<script>alert('Masukkan data id.');window.location='index.php';</script>";
+  }         
+  ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -73,7 +72,7 @@ include '../../connection.php';
                                     <label class="h6">NISN</label>
                                     <select name="nisn" class="form-control">
                                         <option value="<?php echo $data['nisn'] ?>" selected>
-                                            <?php echo $data['nisn'];?> | <?php echo $data['nama'];?>
+                                        <?php echo $data['nisn'];?> | <?php echo $data['nama'];?>
                                         </option>
                                         
                                     </select>
@@ -85,21 +84,7 @@ include '../../connection.php';
                                     </div>
                                     <div class="form-group mb-3 col-md-4">
                                         <label class="h6">Bulan Bayar</label>
-                                        <select name="bulan_bayar" class="form-control" required>
-                                                <option value="<?php echo $data['bulan_bayar'] ?>" selected><?php echo $data['bulan_bayar'] ?></option>
-                                                <option value="Januari">Januari</option>
-                                                <option value="Febuari">Febuari</option>
-                                                <option value="Maret">Maret</option>
-                                                <option value="April">April</option>
-                                                <option value="Mei">Mei</option>
-                                                <option value="Juni">Juni</option>
-                                                <option value="Juli">Juli</option>
-                                                <option value="Agustus">Agustus</option>
-                                                <option value="September">September</option>
-                                                <option value="Oktober">Oktober</option>
-                                                <option value="November">November</option>
-                                                <option value="Desember">Desember</option>
-                                            </select>
+                                        <input type="text" name="bulan_bayar" value="<?php echo $data['bulan_bayar'] ?>" class="form-control">
                                     </div>
                                     <div class="form-group mb-3 col-md-4">
                                         <label class="h6">Tahun Bayar</label>
@@ -111,14 +96,12 @@ include '../../connection.php';
                                     <input type="text" name="jumlah_bayar" value="<?php echo $data['jumlah_bayar'] ?>" class="form-control">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="h6">Nominal SPP</label>
+                                    <label class="h6">ID SPP</label>
                                     <select name="id_spp" class="form-control">
                                         <option value="<?php echo $data['id_spp'];?>" selected>
                                         <?php echo $data['tahun'];?> | Rp. <?php echo $HN ?>
                                         </option>
-                                        <?php 
-                                            include('../server/api-pembayaran/pilihSpp.php')
-                                        ?>
+                                        
                                     </select>
                                 </div>
                                 
@@ -135,8 +118,8 @@ include '../../connection.php';
             </div>
 
 
-            <?php 
-                include('./components/footer.php')
+        <?php 
+            include('./components/footer.php')
             ?>
     </body>
 </html>

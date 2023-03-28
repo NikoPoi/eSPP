@@ -25,8 +25,7 @@ echo '<div class="card mt-3 mb-2">
                     Jumlah Transaksi : '.number_format($jumlah_bayar).' <br>
                     SPP Bulan : '.$row['bulan_bayar'].' <br>
                 </p>
-                <a href="../client-admin/detail.php?id='.$row['id_pembayaran'].'" class="btn btn-primary">Detail</a>
-                <a href="../client-admin/invoice.php?id='.$row['id_pembayaran'].'" class="btn btn-info text-light" target="_blank">Cetak</a>
+                <a href="../client-siswa/detail.php?id='.$row['id_pembayaran'].'" class="btn btn-primary px-5">Detail</a>
             </div>
             <div class="card-text col align-self-center text-end">
                 <div class="display-5 fw-normal">Rp.'.number_format($jumlah_bayar).'</div>

@@ -12,9 +12,9 @@ $id_spp =$_POST['id_spp'];
 $jumlah_bayar =$_POST['jumlah_bayar'];
 
 
-$query = "UPDATE pembayaran SET id_petugas = '$id_petugas',nisn ='$nisn', tgl_bayar='$tgl_bayar', bulan_bayar='$bulan_bayar',  tahun_bayar='$tahun_bayar', id_spp='$id_spp', jumlah_bayar='$jumlah_bayar' WHERE id_pembayaran = '$id'";
-mysqli_query($kon, $query);
+$query = "UPDATE pembayaran SET id_petugas ='$id_petugas', nisn ='$nisn', tgl_bayar='$tgl_bayar', bulan_bayar='$bulan_bayar',  tahun_bayar='$tahun_bayar', id_spp='$id_spp', jumlah_bayar='$jumlah_bayar' WHERE id_pembayaran = '$id'";
+mysqli_query($conn, $query);
 
-echo "<script>alert('Data berhasil diubah.');window.location='../pembayaran.php';</script>";
+echo "<script>alert('Data berhasil diubah.');window.location='../../client-admin/pembayaran.php';</script>";
 
 ?>

@@ -45,7 +45,7 @@
                                         <div class="form-group m-2 col">
                                             <div class="row">
                                                 <div class="h6">ID Petugas</div>
-                                                <select name="id_petugas" class="form-control">
+                                                <select name="id_petugas" class="form-control" required>
                                                     <option value="NO OPTION SELECT" selected>Pilih Petugas</option>
                                                         <?php
                                                         include '../server/api-pembayaran/pilihPetugas.php'
@@ -56,7 +56,7 @@
                                         <div class="form-group m-2 col">
                                             <div class="row">
                                                 <div class="h6">NISN</div>
-                                                <select name="nisn" class="form-control">
+                                                <select name="nisn" class="form-control" required>
                                                     <option value="NO OPTION SELECT" selected>Pilih NISN</option>
                                                         <?php
                                                         include '../server/api-pembayaran/pilihNisn.php'
@@ -68,20 +68,35 @@
                                     <div class="row mb-2">
                                         <div class="form-group col">
                                             <label class="h6">Tanggal Bayar</label>
-                                            <input type="text" class="form-control" name="tgl_bayar">
+                                            <input type="text" class="form-control" name="tgl_bayar" required>
                                         </div>
                                         <div class="form-group col">
                                             <label class="h6">Bulan Bayar</label>
-                                            <input type="text" class="form-control" name="bulan_bayar">
+                                            <!-- <input type="text" class="form-control" name="bulan_bayar"> -->
+                                            <select name="bulan_bayar" class="form-control" required>
+                                                <option value="NO VALUE" selected>Pilih Bulan</option>
+                                                <option value="Januari">Januari</option>
+                                                <option value="Febuari">Febuari</option>
+                                                <option value="Maret">Maret</option>
+                                                <option value="April">April</option>
+                                                <option value="Mei">Mei</option>
+                                                <option value="Juni">Juni</option>
+                                                <option value="Juli">Juli</option>
+                                                <option value="Agustus">Agustus</option>
+                                                <option value="September">September</option>
+                                                <option value="Oktober">Oktober</option>
+                                                <option value="November">November</option>
+                                                <option value="Desember">Desember</option>
+                                            </select>
                                         </div>
                                         <div class="form-group col">
                                             <label class="h6">Tahun Bayar</label>
-                                            <input type="text" class="form-control" name="tahun_bayar">
+                                            <input type="text" class="form-control" name="tahun_bayar" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                             <label class="h6">Jumlah Bayar</label>
-                                            <input type="number" class="form-control" name="jumlah_bayar">
+                                            <input type="number" class="form-control" name="jumlah_bayar" min="1" max="330000" required>
                                     </div>
                                     <!-- <div class="form-group">
                                         <div class="row">

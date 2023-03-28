@@ -18,7 +18,7 @@
                 <div class="container">
                         <h1>Data Histori Pembayaran</h1>
                         <?php
-                            include('../server/api-histori/getData.php')
+                            include('../server/api-histori/getDataHistoriSiswa.php')
                         ?>
                 </div>
             </div>

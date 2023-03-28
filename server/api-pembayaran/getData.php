@@ -16,7 +16,7 @@ echo '<table class="table table-striped">
     <th scope="col">Tanggal Bayar</th>
     <th scope="col">Bulan Bayar</th>
     <th scope="col">Tahun Bayar</th>
-    <th scope="col">ID SPP</th>
+    <th scope="col">Nominal SPP</th>
     <th scope="col">Jumlah Bayar</th>
     <th scope="col" class="col-2 text-center">Opsi</th>
     </tr>

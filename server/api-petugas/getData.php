@@ -6,7 +6,7 @@ $sql ="SELECT * FROM petugas  ";
 $query = mysqli_query($conn, $sql);
 
 
-echo '<table class="table">
+echo '<table class="table table-striped">
     <thead>
     <tr>
     <th scope="col">ID</th>

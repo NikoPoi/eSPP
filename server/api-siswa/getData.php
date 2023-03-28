@@ -6,7 +6,7 @@ $sql ="SELECT * FROM siswa as a LEFT JOIN kelas as b ON a.id_kelas = b.id_kelas 
 $query = mysqli_query($conn, $sql);
 
 
-echo '<table class="table">
+echo '<table class="table table-striped">
     <thead>
     <tr>
     <th scope="col">NISN</th>

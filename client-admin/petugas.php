@@ -46,25 +46,25 @@
                                     <div class="form-group mb-3">
                                         <div class="row">
                                             <label class="h6">Username</label>
-                                            <input type="text" name="username" class="form-control col-md-8">
+                                            <input type="text" name="username" class="form-control col-md-8" required>
                                         </div>
                                     </div>
                                     <div class="form-group mb-3">
                                         <div class="row">
                                             <label class="h6">Password</label>
-                                            <input type="text" class="form-control col-md-8" name="password">
+                                            <input type="text" class="form-control col-md-8" name="password" required>
                                         </div>
                                     </div>
                                     <div class="form-group mb-3">
                                         <div class="row">
                                             <label class="h6">Nama Petugas</label>
-                                            <input type="text" class="form-control col-md-8" name="nama_petugas">
+                                            <input type="text" class="form-control col-md-8" name="nama_petugas" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                             <div class="row">
                                                 <div class="h6">Level Petugas</div>
-                                                <select name="level" class="form-control" style="cursor: pointer;">
+                                                <select name="level" class="form-control" style="cursor: pointer;" required>
                                                     <option value="No Selected" selected >Pilih Level</option>
                                                     <option value="admin">Admin</option>
                                                     <option value="petugas">Petugas </option>

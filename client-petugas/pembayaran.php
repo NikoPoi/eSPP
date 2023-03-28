@@ -81,7 +81,7 @@
                                     </div>
                                     <div class="form-group">
                                             <label class="h6">Jumlah Bayar</label>
-                                            <input type="number" class="form-control" name="jumlah_bayar">
+                                            <input type="number" class="form-control" name="jumlah_bayar" max="330000" required>
                                     </div>
                                     <!-- <div class="form-group">
                                         <div class="row">
