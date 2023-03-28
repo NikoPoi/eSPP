@@ -1,0 +1,13 @@
+.main_header {
+    background-image: url(../img/main_bg.png);
+    background-size: 716px;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 85vh;
+}
+
+.nav-link {
+    font-size: large !important;
+    font-weight: 400 !important;
+    color: black !important;
+}
